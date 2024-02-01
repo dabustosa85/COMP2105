@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>CSS Transitions Menu | COMP2105 Motion Graphics for Interaction</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+        div#container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        nav { 
+            text-align:center;
+        }
+        nav ul {
+            padding: 0; 
+        }
+        nav ul li {
+            display:inline-block;
+            margin-right: 10px; 
+            transition: margin-left 0.3s ease-in-out; 
+        }
+        nav ul li a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: white;
+            background-color: #4d6c90;
+            border-radius: 8px;
+            font-size: 20px;
+            transition: transform 0.3s ease-in-out; 
+
+        }
+        nav ul li:hover a {
+            transform: scale(1.5);  
+            background-color: #849fc0;
+            margin-left: 20px; 
+            margin-right: 20px; 
+        }
+    </style>
+</head>
+<body>
+    <!-- Page container for layout -->
+    <div id="container">
+        <h1>CSS Transitions Menu</h1>
+        <nav>
+            <ul>
+                <li><a href="">First Item</a></li>
+                <li><a href="">Second Item</a></li>
+                <li><a href="">Third Item</a></li>
+                <li><a href="">Fourth Item</a></li>
+                <li><a href="">Fifth Item</a></li>
+            </ul>
+        </nav>
+    </div><!-- end div#container -->
+</body>
+</html>
