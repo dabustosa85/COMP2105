@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>CSS Transitions Online Exercise 4 | COMP2105 Motion Graphics for Interaction</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+        div#container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        p {
+            background-color: rgb(255,0,0);
+            color: white;
+            font-weight: bold;
+            width: 200px;
+            height: 200px;
+            padding: 50px;
+            margin: 0;
+
+            /* STEP 1a: Set up the transition */
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, width 0.3s ease-in-out, height 0.3s ease-in-out, padding 0.3s ease-in-out, margin 0.3s ease-in-out;
+
+            /* STEP 2a: Set up multiple properties to be transitioned */
+            transition-property: background-color, color, width, height, padding, margin;
+
+            /* STEP 4: Replace the above code with the shorthand version - 
+            transition: <property> <duration> <timing-function> <delay>; 
+            transition: all 0.3s ease-in-out;
+            transition-property: background-color, color, width, height, padding, margin;*/
+        }
+        p:hover {
+            /* STEP 1b: Define the new visual state to be transitioned to */
+            background-color: /* Nuevo color de fondo al hacer hover */;
+            color: green;
+            width: 300px;
+            height: 300px;
+            padding: 300px;
+            margin: 0px;
+
+            /* STEP 2b: Define the other new visual states to be transitioned to */
+            font-size: 100px;
+            border: 2px solid black;
+            opacity: 0.8;
+            color: white;
+            background-color: blue;
+            
+            /* STEP 3: Move transition properties to where the new state is defined */
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, width 0.3s ease-in-out, height 0.3s ease-in-out, padding 0.3s ease-in-out, margin 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Page container for layout -->
+    <div id="container">
+        <h1>CSS Transitions</h1>
+        <p>Hover me.</p>
+    </div><!-- end div#container -->
+</body>
+</html>
